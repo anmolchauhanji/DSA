@@ -1,6 +1,3 @@
-#include <iostream>
-#include <vector>
-using namespace std;
 
 class Solution {
 public:
@@ -23,10 +20,3 @@ public:
     }
 };
 
-
-int main() {
-    Solution sol;
-    vector<int> arr = {55,52,5,652,5,55,5,5};
-    cout << "Largest element: " << sol.largest(arr) << endl;
-    return 0;
-}
