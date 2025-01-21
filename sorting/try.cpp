@@ -1,31 +1,32 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+int sqaure( int target) {
+       
+        int  s=0,e=target-1,mid = s+(e-s)/2;
+        while(s<=e){
+          int  square=mid*mid;
+            if (square==target)
+            {
+                return mid;
+            }else if(square>target){
+                e=mid-1;
+            
+            }else if(square<target){
+                s=mid+1;
+            }
+            
+            mid= s+(e-s)/2;
+            
+        }
+        return -1;
+    }
+
+
 int main()
 {
-  int swapp = 0;
-  int arr[] = {1,1,2,2,3};
-  int n = sizeof(arr) / sizeof(arr[0]);
-  vector<int> temp;
-  for (int i = 1; i < n-1; i++)
-  {
-    if (arr[i]==arr[i-1])
-    {
-     temp.push_back(arr[i]);
-    }
-    if (arr[i]>arr[i-1])
-    {
-    temp.push_back(arr[i]);
-    }
+    int target = 9;
     
-  }
-  
-  
-for (int i = 0; i < temp.size(); i++)
-{
- cout<<temp[i]<<endl;
-}
-
-  
-  return 0;
+    cout<<"lower bound"<<sqaure(1024)<<endl;
+    return 0;
 }
