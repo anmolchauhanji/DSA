@@ -1,0 +1,30 @@
+
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cin >> n;
+    int arr[n];
+    int secarr[n+1];
+    for (int i =0;i <n;i++){
+        cin>> arr[i];
+    }
+    int value,position,j=0;
+    cin>> value;//3
+    cin>> position;//25
+    
+    for(int i=0;i<n+1;i++){
+        if(i==position-1){
+            secarr[i]=value;
+        }else{
+            secarr[i]=arr[j];
+            j++;
+        }
+    }
+    
+    for(int i=0;i<n+1;i++){
+cout << secarr[i] << " ";
+    }
+
+    return 0;
+}
